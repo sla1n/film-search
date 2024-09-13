@@ -1,0 +1,304 @@
+*, *::before, *::after {
+    box-sizing: border-box;  
+}
+
+body{
+	margin: 0;
+	padding: 0;
+	font-family: 'Inter', sans-serif;
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+}
+
+h1, h2, p{
+	margin: 0;
+	padding: 0;
+}
+
+header{
+	display: flex;
+	flex-direction: column;
+	gap: 1em;
+	text-align: center;
+	background-image: linear-gradient(rgba(0, 0, 0, 0.8),rgba(0, 0, 0, 0.8)) , url('/img/THJJRUhNlEc.png');
+	background-size: cover;
+	justify-content: space-around;
+	align-items: center;
+	padding: 2.125em 1.625em 3.125em 1.625em; 
+	
+}
+
+h1{
+	/* font-size: 2.625rem; */
+	font-size: 2rem;
+	font-weight: bold;
+	color: #fff;
+	text-decoration: underline;
+}
+
+h2{
+	/* font-size: 0.875rem; */
+	font-size: 1rem;
+	cursor: pointer;
+}
+
+a{
+	text-decoration: none;
+	color: #fff;
+}
+
+/* section{    
+	padding: 0 2.75em;
+} */
+
+.error{
+	flex-grow: 1;    
+	display: flex;
+    justify-content: center; 
+    align-items: center;  
+	text-align: center;
+	
+}
+
+.error p{
+	color: #DFDDDD;
+	font-weight: bold;
+	font-size: 1.125rem;
+}
+
+form {
+    display: flex;
+    background-color: #fff;
+    border: 1px solid #D1D5DB;
+    justify-content: space-between;	
+    align-items: stretch; 
+    margin-top: -1.2em;
+    border-radius: 6px;
+}
+
+
+#search-input{
+    flex-grow: 1;
+    border: none;
+    border-radius: 6px 0 0 6px;
+	width: 80%;
+	height: 100%;
+}
+
+#search-input:focus,
+#search-input:active{
+	border: none;
+	outline: none;
+}
+
+#search-input, button{
+	font-family: inherit;
+	border-radius: 6px;
+	border: none;
+}
+
+
+button {
+    height: auto;
+    padding: 0.5625em 0.8125em;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border: none;
+	cursor: pointer;
+}
+
+.search-container{
+	padding: 0.5625em 0 0.5625em 0.8125em;
+	flex-grow: 1;
+}
+
+.movie-container{
+	padding: 1.3125em 0.5em 1.3125em 0.5em;
+	gap: 1em;
+	border-bottom: 1.5px solid #E5E7EB;
+}
+
+.movie-container img{
+	align-self: center;
+	max-height: 147px;
+	max-width: 100px;
+}
+
+.movie-container, 
+.name-container,
+.features-container,
+.add-watchlist-container{
+	display: flex;
+}
+
+.name-container,
+.add-watchlist-container{
+	align-items: center
+}
+
+.name-container{
+	margin: 0.9375em 0 0.6875em 0;
+}
+
+.movie-name{
+	font-size: 1rem;
+	font-weight: 500;
+	margin-right: 0.5em;
+}
+
+.movie-rating{
+	font-size: 0.75rem;
+}
+
+.features-container{
+	flex-direction: column;
+	gap: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+
+.features-container p{
+	font-size: 0.625rem;
+	
+}
+
+.description-text{
+	font-size: 0.75rem;
+	color: #6B7280;
+}
+
+
+.search-icon{
+	font-size: 1rem;
+	
+	color: #9CA3AF;
+}
+
+.star-icon{
+	font-size: 0.75em;
+	color: yellow;
+}
+
+.add-icon{
+	color: #fff;
+	font-size: 0.75rem;
+	padding: 0.2em;
+	background-color:#000;
+	border-radius: 50%;
+	text-align: center;
+	margin-right: 0.3em;
+	
+}
+
+.added-icon{
+	color: #fff;
+	font-size: 0.7rem;
+	padding: 0.2em;
+	background-color: green;
+	border-radius: 50%;
+	text-align: center;
+	margin-right: 0.3em;
+	
+}
+
+@media (min-width: 600px){
+	header{
+		flex-direction: row;
+		padding: 3.125em 2.625em 4.125em 2.625em; 
+	}
+
+	section{
+		padding: 0 2em;
+	}
+
+	.features-container{
+		flex-direction: row;
+	}
+
+	h1{
+		font-size: 2.625rem;
+	}
+	h2{
+		font-size: 0.875rem;
+	}
+
+	.movie-name{
+		font-size: 1.125rem;
+	}
+
+	.movie-rating{
+		font-size: 0.75rem;
+	}
+
+	
+	.features-container p{
+		font-size: 0.75rem;
+	}
+
+	.description-text{
+		font-size: 0.875rem;
+	}
+}
+
+@media (min-width: 1280px){
+	header{
+		flex-direction: row;
+		padding: 5.125em 4.625em 6.125em 4.625em; 
+	}
+
+	section{
+		padding: 0 8em;
+	}
+
+	.features-container{
+		flex-direction: row;
+	}
+
+	h1{
+		font-size: 3.625rem;
+	}
+	h2{
+		font-size: 1.875rem;
+	}
+
+	.movie-name{
+		font-size: 2.125rem;
+	}
+
+	.movie-rating{
+		font-size: 1.75rem;
+	}
+
+	.features-container{
+		gap: 2em;
+	}
+
+	.features-container p{
+		font-size: 1.5rem;
+	}
+
+	.description-text{
+		font-size: 1.875rem;
+	}
+
+	.movie-container{
+		padding-left: 1em;
+		padding-right: 1em;
+		gap: 2em;
+	}
+
+	.movie-container img{
+		max-height: 247px;
+		max-width: 200px;
+	}
+
+	.star-icon{
+		font-size: 1.2rem;
+		margin-right: 0.2em;
+	}
+	
+	.add-icon{
+		font-size: 1rem;
+	}
+}
