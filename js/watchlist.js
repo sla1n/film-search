@@ -21,7 +21,7 @@ async function renderWatchlist(){
 async function getWatclistHtml(){
 	let watchlistHtml = ''
 	for (var i = 0; i < localStorage.length; i++){
-		const res = await fetch(`http://www.omdbapi.com/?i=${localStorage.key(i)}&apikey=${APIkey}`)
+		const res = await fetch(`https://www.omdbapi.com/?i=${localStorage.key(i)}&apikey=${APIkey}`)
 		const dataMovie = await res.json()
 		watchlistHtml += 
 		`

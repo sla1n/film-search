@@ -9,7 +9,7 @@ searchForm.addEventListener('submit', async (e)=>{
 	e.preventDefault()
 	
 	const searchInput = document.getElementById('search-input').value 
-	const res = await fetch(`http://www.omdbapi.com/?s=${searchInput}&type=movie&apikey=${APIkey}`)
+	const res = await fetch(`https://www.omdbapi.com/?s=${searchInput}&type=movie&apikey=${APIkey}`)
 	const data = await res.json()
 	searchIdArray = []
 	
@@ -46,7 +46,7 @@ function getErrorHtml(){
 async function getHtmlMovies(arr) {
 	let moviesHtml = ''
 	for (id of arr){
-		const res = await fetch(`http://www.omdbapi.com/?i=${id}&apikey=${APIkey}`)
+		const res = await fetch(`https://www.omdbapi.com/?i=${id}&apikey=${APIkey}`)
 		const dataMovie = await res.json()
 		let classesOfIcon = ""
 	
@@ -88,7 +88,7 @@ async function getHtmlMovies(arr) {
 
 
 async function handleAddClick(movieId){
-	const res = await fetch(`http://www.omdbapi.com/?i=${movieId}&apikey=${APIkey}`)
+	const res = await fetch(`https://www.omdbapi.com/?i=${movieId}&apikey=${APIkey}`)
 	const data = await res.json()
 	localStorage.setItem(data.imdbID, data)
 }
